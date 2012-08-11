@@ -34,7 +34,7 @@ class DevicesController < ApplicationController
     @room = Room.find params[:room_id]
     @device = @room.devices.find params[:id]
 
-    if @device.update_attributes params[@device.type_to_symbol]
+    if @device.update_attributes params[@device.device_type]
       redirect_to room_device_path(@room, @device), notice: 'Device updated'
     else
       render :edit

@@ -10,11 +10,11 @@ Domotic::Application.routes.draw do
     resources :rooms do
       resources :devices, only: :index
       resources :lamps, only: [:index, :show, :on, :off, :on_all, :off_all] do
-        put :on, on: :member
-        put :off, on: :member
+        post :on, on: :member
+        post :off, on: :member
 
-        put :on_all, on: :collection
-        put :off_all, on: :collection
+        post :on_all, on: :collection
+        post :off_all, on: :collection
       end
       resources :dimmer_lamps, only: [:index, :show, :update]
     end

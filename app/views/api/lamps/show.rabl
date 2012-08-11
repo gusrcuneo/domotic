@@ -1,2 +1,2 @@
-object @lamp, object_root: false
+object @lamp
 attributes :id, :name, :description, :status

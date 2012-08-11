@@ -10,10 +10,10 @@ Rollback migrations:
 
 == API Access with curl
 PUT without arguments
-  curl -X PUT http://localhost:8080/api/rooms/1/lamps/1/off
+  curl -X POST http://localhost:8080/api/rooms/1/lamps/1/off
 
 PUT with arguments
-  curl -X PUT -d "status=10" http://localhost:8080/api/rooms/1/dimmer_lamps/2
+  curl -X POST -d "status=10" http://localhost:8080/api/rooms/1/dimmer_lamps/2
 
 == Debugging Domotics
 

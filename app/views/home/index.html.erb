@@ -8,9 +8,43 @@
 
 </div>
 
+<script type="text/html" id="device_lamp">
+  <div class="device row" id="device_{{id}}">
+    <div class="span4">
+      <strong>{{name}}</strong>
+    </div>
+    <div class="span3">
+      {{#status}}
+      <span class="label label-success">Encedido</span>
+      {{/status}}
+      {{^status}}
+      <span class="label label-important">Apagado</span>
+      {{/status}}
+
+    </div>
+    <div class="span2">
+      {{#status}}
+      <button class="btn btn-danger device_off" data-device_id="{{id}}" data-device_controller="{{device_controller}}">Apagar</button>
+      {{/status}}
+      {{^status}}
+      <button class="btn btn-success device_on" data-device_id="{{id}}" data-device_controller="{{device_controller}}">Encender</button>
+      {{/status}}
+    </div>
+  </div>
+</script>
 
 
 
-<script type="text/html" id="device_template">
-  prueba {{device.name}}
+<script type="text/html" id="device_dimmer_lamp">
+  <div class="device row" id="device_{{id}}">
+    <div class="span4">
+      <strong>{{name}}</strong>
+    </div>
+    <div class="span3">
+      <span class="badge">{{status}}</span>
+    </div>
+    <div class="span2">
+      <input class="span1 dimmer_lamp_input" data-device_id="{{id}}" data-device_controller="{{device_controller}}" value="{{status}}">
+    </div>
+  </div>
 </script>

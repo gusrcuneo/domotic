@@ -1,2 +1,2 @@
 collection @devices, object_root: false
-attributes :id, :type, :name, :description, :status
+attributes :id, :device_type, :device_controller, :name, :description, :status

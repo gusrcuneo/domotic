@@ -26,9 +26,16 @@ class Device < ActiveRecord::Base
 
   # Return the user type downcased, dasherized and symbolized
   # ej: SuperUser -> :super_user
-  def type_to_symbol
+  def device_type
     ActiveModel::Naming.param_key(self)
   end
 
+
+
+  # Return the user type downcased, dasherized and symbolized
+  # ej: SuperUser -> :super_user
+  def device_controller
+    self.device_type.pluralize
+  end
 
 end
