@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120811144257) do
+ActiveRecord::Schema.define(:version => 20120811150909) do
+
+  create_table "devices", :force => true do |t|
+    t.integer  "room_id"
+    t.string   "type"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "status"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "devices", ["room_id"], :name => "index_devices_on_room_id"
 
   create_table "rooms", :force => true do |t|
     t.string   "name"

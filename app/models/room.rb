@@ -10,5 +10,15 @@
 #
 
 class Room < ActiveRecord::Base
+
+  # Attributes access
+  #----------------------------------------------------------------------
+
   attr_accessible :description, :name
+
+  # assiciatons
+  #----------------------------------------------------------------------
+  has_many :devices, dependent: :destroy
+
+
 end

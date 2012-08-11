@@ -1,0 +1,5 @@
+<%= link_to "Editar", edit_room_device_path(@room, @device), class: 'btn btn-success pull-right' %>
+<h1 class="page-header">Room <%= @device.name %></h1>
+<%= @device.description %>
+
+<%= link_to 'Habitacion', room_path(@room) %>

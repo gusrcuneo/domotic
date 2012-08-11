@@ -1,0 +1,2 @@
+class Lamp < Device
+end

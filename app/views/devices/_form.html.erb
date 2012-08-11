@@ -1,0 +1,20 @@
+<%= form_for @device, url: url do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.select :type, DEVICE_TYPES  %>
+  </div>
+
+
+  <%= f.submit class:' btn btn-primary' %>
+<% end %>
