@@ -18,7 +18,9 @@ class Room < ActiveRecord::Base
 
   # assiciatons
   #----------------------------------------------------------------------
+
   has_many :devices, dependent: :destroy
   has_many :lamps
+  has_many :dimmer_lamps
 
 end

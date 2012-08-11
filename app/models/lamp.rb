@@ -27,4 +27,12 @@ class Lamp < Device
     update_attribute :status, 0
   end
 
+  def on?
+    self.status == true
+  end
+
+  def off?
+    self.status == false
+  end
+
 end

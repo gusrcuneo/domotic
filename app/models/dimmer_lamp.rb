@@ -13,4 +13,9 @@
 #
 
 class DimmerLamp < Device
+
+
+  def status
+    read_attribute(:status) || 0
+  end
 end
