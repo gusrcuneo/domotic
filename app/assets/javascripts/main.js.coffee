@@ -94,9 +94,9 @@ refreshRooms = ->
 app = {}
 
 $ ->
-
-  refreshRooms()
-  refreshDevices()
-  app.room_id = gon.initial_room_id
-  $("select#rooms").change (e) ->
-    setSelectedRoom(e.target)
+  if gon.initial_room_id
+    refreshRooms()
+    refreshDevices()
+    app.room_id = gon.initial_room_id
+    $("select#rooms").change (e) ->
+      setSelectedRoom(e.target)

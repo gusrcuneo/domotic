@@ -1,5 +1,7 @@
 == Welcome to Domotics
 
+Start MySQL:
+  mysql.server start
 Startup command:
   foremant start
 Run migrations:

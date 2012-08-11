@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Domotic</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= include_gon %>
+  <head>
+    <title>Reservas ADMINISTRACION</title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le styles -->
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= include_gon init: true %>
 
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top" >
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "Domotic, casa domotica del Gus", root_path, class: 'brand' %>
+          <ul id="top_navigation" class="nav secondary-nav pull-right">
+            <li><%= link_to "Habitaciones", rooms_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <div class="container">
+      <div id="log_console">
+        <% if alert %>
+          <div class="log_error"><%= alert %></div>
+				<% elsif notice %>
+					<div class="log_notice"><%= notice %></div>
+				<% end %>
+	    </div>
+      <div id="yield">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
 </html>
