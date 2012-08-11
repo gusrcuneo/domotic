@@ -36,3 +36,14 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+
+# Custom gems
+gem 'unicorn'           # Application server for rails
+gem 'gon'               # Rails variables in js
+
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'annotate', git: 'git://github.com/ctran/annotate_models.git'
+end
