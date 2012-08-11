@@ -1,3 +1,0 @@
-class Switch < Device
-
-end

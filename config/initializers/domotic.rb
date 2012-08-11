@@ -1,3 +1,3 @@
 # Available devices
 
-DEVICE_TYPES = ['Switch', 'Lamp']
+DEVICE_TYPES = ['Lamp', 'DimmerLamp']

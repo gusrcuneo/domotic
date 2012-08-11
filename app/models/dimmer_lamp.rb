@@ -12,19 +12,5 @@
 #  updated_at  :datetime         not null
 #
 
-class Lamp < Device
-
-  def status
-    status = read_attribute(:status) || 0
-    status >  0
-  end
-
-  def on!
-    update_attribute :status, 255
-  end
-
-  def off!
-    update_attribute :status, 0
-  end
-
+class DimmerLamp < Device
 end
