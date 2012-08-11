@@ -41,7 +41,7 @@ gem 'jquery-rails'
 # Custom gems
 gem 'unicorn'           # Application server for rails
 gem 'gon'               # Rails variables in js
-
+gem 'rabl'              # Json generation
 
 group :test, :development do
   gem 'rspec-rails'
