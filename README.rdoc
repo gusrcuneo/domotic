@@ -1,8 +1,19 @@
 == Welcome to Domotics
 
-Startup command: foremant start
-Run migrations: bundle exec rake db:migrate
-Rollback migrations: bundle exec rake db:rollback
+Startup command:
+  foremant start
+Run migrations:
+  bundle exec rake db:migrate
+Rollback migrations:
+  bundle exec rake db:rollback
+
+
+== API Access with curl
+PUT without arguments
+  curl -X PUT http://localhost:8080/api/rooms/1/lamps/1/off
+
+PUT with arguments
+  curl -X PUT -d "status=10" http://localhost:8080/api/rooms/1/dimmer_lamps/2
 
 == Debugging Domotics
 
