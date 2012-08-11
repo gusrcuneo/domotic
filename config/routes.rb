@@ -8,7 +8,8 @@ Domotic::Application.routes.draw do
 
   namespace 'api' do
     resources :rooms do
-      resources :devices
+      resources :lamps
+      resources :dimmer_lamps
     end
   end
 

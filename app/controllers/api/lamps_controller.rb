@@ -1,7 +1,7 @@
-class Api::DevicesController < Api::ApiController
+class Api::LampsController < Api::ApiController
   def index
     @room = Room.find params[:room_id]
-    @devices = @room.devices
+    @lamps = @room.lamps
   end
 
   def show
