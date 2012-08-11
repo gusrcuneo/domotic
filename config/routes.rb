@@ -8,6 +8,7 @@ Domotic::Application.routes.draw do
 
   namespace 'api' do
     resources :rooms do
+      resources :devices, only: :index
       resources :lamps, only: [:index, :show, :on, :off, :on_all, :off_all] do
         put :on, on: :member
         put :off, on: :member
@@ -15,8 +16,7 @@ Domotic::Application.routes.draw do
         put :on_all, on: :collection
         put :off_all, on: :collection
       end
-      resources :dimmer_lamps, only: [:index, :show, :update] do
-      end
+      resources :dimmer_lamps, only: [:index, :show, :update]
     end
   end
 
